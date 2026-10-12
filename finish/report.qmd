@@ -1,0 +1,26 @@
+---
+title: "Which weather predicts ozone best?"
+format: html
+---
+
+```{r}
+#| label: libraries
+source(here::here("finish/packages.R"))
+```
+
+```{r}
+#| label: load-targets
+tar_load(c(ozone_fit_glance, gg_ozone_residuals))
+```
+
+```{r}
+#| label: fit
+ozone_fit_glance |>
+  select(model, nobs, r_squared, aic, bic) |>
+  arrange(aic)
+```
+
+```{r}
+#| label: residuals
+gg_ozone_residuals
+```

@@ -1,0 +1,10 @@
+_targets/
+_start_targets/
+_finish_targets/
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
+.quarto
+*.html
+*_files/
